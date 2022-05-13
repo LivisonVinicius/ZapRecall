@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:#FB6B6B;
+}
+h1 {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.title {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+}
+.title img{
+    width: 52px;
+    height: 60px;
+}
+.title h1{
+    width: 203px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+}
+/*                    Tela 1                      */
+.tela1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tela1 div {
+    font-family: 'Recursive', sans-serif;
+    background-color: #FFFFFF;
+    width: 246px;
+    height: 54px;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    color: #D70900;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.tela1 img {
+    width: 136px;
+    height: 161px;
+}
+.tela1 h1 {
+    margin-top: 13px;
+}
+
+/*                         Tela 2                               */
+
+.perguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.pergunta{
+    margin-bottom: 25px;
+}
+.initial {
+    background-color:#FFFFFF;
+    width: 300px;
+    height: 65px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: 'Recursive', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.back-face {
+    transform: rotateY(180deg);
+}
+.virar .back-face{
+    transform: rotateY(0deg);
+}
+.virar .front-face{
+    transform: rotateY(-180deg);
+}
+.initial img {
+    margin-right: 15px;
+}
+h3 {
+    margin-left: 15px;
+}
+.escondido{
+    display: none;
+}
+.face{
+    width: 300px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
