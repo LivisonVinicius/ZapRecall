@@ -186,13 +186,14 @@ footer {
     color: #333333;
     background-color: #FFFFFF;
     position: fixed;
-    right: 0px;
+    left: 0px;
     bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     word-wrap: break-word;
+    overflow-y: hidden;
 }
 footer ion-icon {
     width:23px;
@@ -209,4 +210,12 @@ footer h6{
 }
 footer img {
     margin-right: 12px;
+}
+.front-face img {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+}
+.front-face{
+    position: relative;
 }
