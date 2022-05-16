@@ -1,5 +1,6 @@
+import Party from "../imgs/party.png"
+import Sad from "../imgs/sad.png"
 export default function Footer (props) {
-    const listaDeIcons=props.Answered.map(Resposta =>  <ion-icon name={Resposta} class={`md hydrated ${Resposta}`}></ion-icon>)
     const respostasErradas = props.Answered.filter(resposta => resposta==="close-circle-sharp")
     if(props.Answered.length===8){
         return(
@@ -8,31 +9,26 @@ export default function Footer (props) {
             <p><img src={Party} alt="Boa"/>Parabéns!</p>
             <h6>Você não esqueceu de {"\n"}
                 nenhum flashcard!</h6>
-            {`${props.Answered.length}/8 Concluídos`}
-            <div>
-                {listaDeIcons}
-            </div>
+            <NumResps Answered={props.Answered} />
         </footer>:
         <footer>
             <p><img src={Sad} alt="Putz"/>Putz...</p>   
             <h6>Ainda faltam alguns...{"\n"}
                 Mas não desanime!</h6>
-            {`${props.Answered.length}/8 Concluídos`}
-            <div>
-                {listaDeIcons}
-            </div>
+            <NumResps Answered={props.Answered} />
         </footer> 
         )   
     }
     else{
         return (
         <footer>
-            <NumResps />
+            <NumResps Answered={props.Answered} />
         </footer>
     )
     }
 }
-function NumResps (){
+function NumResps (props){
+    const listaDeIcons=props.Answered.map((Resposta,index) =>  <ion-icon name={Resposta} class={`md hydrated ${Resposta}`} key={index}></ion-icon>)
     return (
         <>
             {`${props.Answered.length}/8 Concluídos`}
@@ -40,6 +36,5 @@ function NumResps (){
                 {listaDeIcons}
             </div>
         </>
-        
     )
 }
